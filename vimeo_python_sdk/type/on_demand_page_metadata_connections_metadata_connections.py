@@ -1,0 +1,41 @@
+# coding: utf-8
+
+"""
+    Vimeo API
+
+    Build something great. Vimeo's API supports flexible, high-quality video integration with your custom apps.
+
+    The version of the OpenAPI document: 3.4
+    Created by: https://developer.vimeo.com/help
+"""
+
+from datetime import datetime, date
+import typing
+from enum import Enum
+from typing_extensions import TypedDict, Literal, TYPE_CHECKING
+
+from vimeo_python_sdk.type.on_demand_page_metadata_connections_metadata_connections_comments import OnDemandPageMetadataConnectionsMetadataConnectionsComments
+from vimeo_python_sdk.type.on_demand_page_metadata_connections_metadata_connections_genres import OnDemandPageMetadataConnectionsMetadataConnectionsGenres
+from vimeo_python_sdk.type.on_demand_page_metadata_connections_metadata_connections_likes import OnDemandPageMetadataConnectionsMetadataConnectionsLikes
+from vimeo_python_sdk.type.on_demand_page_metadata_connections_metadata_connections_pictures import OnDemandPageMetadataConnectionsMetadataConnectionsPictures
+from vimeo_python_sdk.type.on_demand_page_metadata_connections_metadata_connections_seasons import OnDemandPageMetadataConnectionsMetadataConnectionsSeasons
+from vimeo_python_sdk.type.on_demand_page_metadata_connections_metadata_connections_videos import OnDemandPageMetadataConnectionsMetadataConnectionsVideos
+
+class RequiredOnDemandPageMetadataConnectionsMetadataConnections(TypedDict):
+    comments: OnDemandPageMetadataConnectionsMetadataConnectionsComments
+
+    genres: OnDemandPageMetadataConnectionsMetadataConnectionsGenres
+
+    likes: OnDemandPageMetadataConnectionsMetadataConnectionsLikes
+
+    pictures: OnDemandPageMetadataConnectionsMetadataConnectionsPictures
+
+    seasons: OnDemandPageMetadataConnectionsMetadataConnectionsSeasons
+
+    videos: OnDemandPageMetadataConnectionsMetadataConnectionsVideos
+
+class OptionalOnDemandPageMetadataConnectionsMetadataConnections(TypedDict, total=False):
+    pass
+
+class OnDemandPageMetadataConnectionsMetadataConnections(RequiredOnDemandPageMetadataConnectionsMetadataConnections, OptionalOnDemandPageMetadataConnectionsMetadataConnections):
+    pass

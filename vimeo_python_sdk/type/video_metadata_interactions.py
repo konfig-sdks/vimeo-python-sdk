@@ -1,0 +1,108 @@
+# coding: utf-8
+
+"""
+    Vimeo API
+
+    Build something great. Vimeo's API supports flexible, high-quality video integration with your custom apps.
+
+    The version of the OpenAPI document: 3.4
+    Created by: https://developer.vimeo.com/help
+"""
+
+from datetime import datetime, date
+import typing
+from enum import Enum
+from typing_extensions import TypedDict, Literal, TYPE_CHECKING
+
+from vimeo_python_sdk.type.video_metadata_interactions_album import VideoMetadataInteractionsAlbum
+from vimeo_python_sdk.type.video_metadata_interactions_ask_ai import VideoMetadataInteractionsAskAi
+from vimeo_python_sdk.type.video_metadata_interactions_ask_ai_viewer import VideoMetadataInteractionsAskAiViewer
+from vimeo_python_sdk.type.video_metadata_interactions_buy import VideoMetadataInteractionsBuy
+from vimeo_python_sdk.type.video_metadata_interactions_can_request_team_role_upgrade import VideoMetadataInteractionsCanRequestTeamRoleUpgrade
+from vimeo_python_sdk.type.video_metadata_interactions_can_update_privacy_to_public import VideoMetadataInteractionsCanUpdatePrivacyToPublic
+from vimeo_python_sdk.type.video_metadata_interactions_channel import VideoMetadataInteractionsChannel
+from vimeo_python_sdk.type.video_metadata_interactions_create_editor import VideoMetadataInteractionsCreateEditor
+from vimeo_python_sdk.type.video_metadata_interactions_delete import VideoMetadataInteractionsDelete
+from vimeo_python_sdk.type.video_metadata_interactions_edit import VideoMetadataInteractionsEdit
+from vimeo_python_sdk.type.video_metadata_interactions_edit_privacy import VideoMetadataInteractionsEditPrivacy
+from vimeo_python_sdk.type.video_metadata_interactions_has_restricted_privacy_options import VideoMetadataInteractionsHasRestrictedPrivacyOptions
+from vimeo_python_sdk.type.video_metadata_interactions_highlights import VideoMetadataInteractionsHighlights
+from vimeo_python_sdk.type.video_metadata_interactions_invite import VideoMetadataInteractionsInvite
+from vimeo_python_sdk.type.video_metadata_interactions_legal_hold import VideoMetadataInteractionsLegalHold
+from vimeo_python_sdk.type.video_metadata_interactions_like import VideoMetadataInteractionsLike
+from vimeo_python_sdk.type.video_metadata_interactions_rent import VideoMetadataInteractionsRent
+from vimeo_python_sdk.type.video_metadata_interactions_report import VideoMetadataInteractionsReport
+from vimeo_python_sdk.type.video_metadata_interactions_set_content_rating import VideoMetadataInteractionsSetContentRating
+from vimeo_python_sdk.type.video_metadata_interactions_subscribe import VideoMetadataInteractionsSubscribe
+from vimeo_python_sdk.type.video_metadata_interactions_summary import VideoMetadataInteractionsSummary
+from vimeo_python_sdk.type.video_metadata_interactions_team_mentions import VideoMetadataInteractionsTeamMentions
+from vimeo_python_sdk.type.video_metadata_interactions_transcript_video_editor import VideoMetadataInteractionsTranscriptVideoEditor
+from vimeo_python_sdk.type.video_metadata_interactions_trim import VideoMetadataInteractionsTrim
+from vimeo_python_sdk.type.video_metadata_interactions_validate import VideoMetadataInteractionsValidate
+from vimeo_python_sdk.type.video_metadata_interactions_view_privacy import VideoMetadataInteractionsViewPrivacy
+from vimeo_python_sdk.type.video_metadata_interactions_view_team_members import VideoMetadataInteractionsViewTeamMembers
+from vimeo_python_sdk.type.video_metadata_interactions_watched import VideoMetadataInteractionsWatched
+from vimeo_python_sdk.type.video_metadata_interactions_watchlater import VideoMetadataInteractionsWatchlater
+
+class RequiredVideoMetadataInteractions(TypedDict):
+    summary: VideoMetadataInteractionsSummary
+
+    album: VideoMetadataInteractionsAlbum
+
+    ask_ai: VideoMetadataInteractionsAskAi
+
+    ask_ai_viewer: VideoMetadataInteractionsAskAiViewer
+
+    buy: VideoMetadataInteractionsBuy
+
+    can_request_team_role_upgrade: VideoMetadataInteractionsCanRequestTeamRoleUpgrade
+
+    can_update_privacy_to_public: VideoMetadataInteractionsCanUpdatePrivacyToPublic
+
+    channel: VideoMetadataInteractionsChannel
+
+    create_editor: VideoMetadataInteractionsCreateEditor
+
+    delete: VideoMetadataInteractionsDelete
+
+    edit: VideoMetadataInteractionsEdit
+
+    edit_privacy: VideoMetadataInteractionsEditPrivacy
+
+    has_restricted_privacy_options: VideoMetadataInteractionsHasRestrictedPrivacyOptions
+
+    highlights: VideoMetadataInteractionsHighlights
+
+    invite: VideoMetadataInteractionsInvite
+
+    legal_hold: VideoMetadataInteractionsLegalHold
+
+    like: VideoMetadataInteractionsLike
+
+    rent: VideoMetadataInteractionsRent
+
+    report: VideoMetadataInteractionsReport
+
+    set_content_rating: VideoMetadataInteractionsSetContentRating
+
+    team_mentions: VideoMetadataInteractionsTeamMentions
+
+    transcript_video_editor: VideoMetadataInteractionsTranscriptVideoEditor
+
+    trim: VideoMetadataInteractionsTrim
+
+    validate: VideoMetadataInteractionsValidate
+
+    view_privacy: VideoMetadataInteractionsViewPrivacy
+
+    view_team_members: VideoMetadataInteractionsViewTeamMembers
+
+    watched: VideoMetadataInteractionsWatched
+
+    watchlater: VideoMetadataInteractionsWatchlater
+
+class OptionalVideoMetadataInteractions(TypedDict, total=False):
+    subscribe: VideoMetadataInteractionsSubscribe
+
+class VideoMetadataInteractions(RequiredVideoMetadataInteractions, OptionalVideoMetadataInteractions):
+    pass

@@ -1,0 +1,32 @@
+# coding: utf-8
+
+"""
+    Vimeo API
+
+    Build something great. Vimeo's API supports flexible, high-quality video integration with your custom apps.
+
+    The version of the OpenAPI document: 3.4
+    Created by: https://developer.vimeo.com/help
+"""
+
+from datetime import datetime, date
+import typing
+from enum import Enum
+from typing_extensions import TypedDict, Literal, TYPE_CHECKING
+from pydantic import BaseModel, Field, RootModel
+
+from vimeo_python_sdk.pydantic.video_metadata_interactions_edit_privacy_content_rating import VideoMetadataInteractionsEditPrivacyContentRating
+from vimeo_python_sdk.pydantic.video_metadata_interactions_edit_privacy_options import VideoMetadataInteractionsEditPrivacyOptions
+from vimeo_python_sdk.pydantic.video_metadata_interactions_edit_privacy_properties import VideoMetadataInteractionsEditPrivacyProperties
+
+class VideoMetadataInteractionsEditPrivacy(BaseModel):
+    content_rating: VideoMetadataInteractionsEditPrivacyContentRating = Field(alias='content_rating')
+
+    options: VideoMetadataInteractionsEditPrivacyOptions = Field(alias='options')
+
+    properties: VideoMetadataInteractionsEditPrivacyProperties = Field(alias='properties')
+
+    # The API URI that resolves to the connection data.
+    uri: str = Field(alias='uri')
+    class Config:
+        arbitrary_types_allowed = True
