@@ -10,11 +10,13 @@
 """
 
 from vimeo_python_sdk.paths.me_payment_methods_payment_method_id.get import GetPaymentMethodInfoRaw
+from vimeo_python_sdk.paths.users_user_id_subscription_id.get import GetSubscriptionInfoRaw
 from vimeo_python_sdk.paths.me_payment_methods.get import ListPaymentMethodsRaw
 
 
 class PaymentsEssentialsApiRaw(
     GetPaymentMethodInfoRaw,
+    GetSubscriptionInfoRaw,
     ListPaymentMethodsRaw,
 ):
     """NOTE:

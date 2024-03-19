@@ -204,7 +204,6 @@ UrisSchema = schemas.StrSchema
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
-        'query': typing.Union[QuerySchema, str, ],
     }
 )
 RequestOptionalQueryParams = typing_extensions.TypedDict(
@@ -215,6 +214,7 @@ RequestOptionalQueryParams = typing_extensions.TypedDict(
         'links': typing.Union[LinksSchema, str, ],
         'page': typing.Union[PageSchema, decimal.Decimal, int, float, ],
         'per_page': typing.Union[PerPageSchema, decimal.Decimal, int, float, ],
+        'query': typing.Union[QuerySchema, str, ],
         'sort': typing.Union[SortSchema, str, ],
         'uris': typing.Union[UrisSchema, str, ],
     },
@@ -260,7 +260,6 @@ request_query_query = api_client.QueryParameter(
     name="query",
     style=api_client.ParameterStyle.FORM,
     schema=QuerySchema,
-    required=True,
     explode=True,
 )
 request_query_sort = api_client.QueryParameter(
@@ -356,12 +355,12 @@ class BaseApi(api_client.Api):
 
     def _videos_1_mapped_args(
         self,
-        query: str,
         direction: typing.Optional[str] = None,
         filter: typing.Optional[str] = None,
         links: typing.Optional[str] = None,
         page: typing.Optional[typing.Union[int, float]] = None,
         per_page: typing.Optional[typing.Union[int, float]] = None,
+        query: typing.Optional[str] = None,
         sort: typing.Optional[str] = None,
         uris: typing.Optional[str] = None,
     ) -> api_client.MappedArgs:
@@ -600,12 +599,12 @@ class Videos1Raw(BaseApi):
 
     async def avideos_1(
         self,
-        query: str,
         direction: typing.Optional[str] = None,
         filter: typing.Optional[str] = None,
         links: typing.Optional[str] = None,
         page: typing.Optional[typing.Union[int, float]] = None,
         per_page: typing.Optional[typing.Union[int, float]] = None,
+        query: typing.Optional[str] = None,
         sort: typing.Optional[str] = None,
         uris: typing.Optional[str] = None,
         **kwargs,
@@ -615,12 +614,12 @@ class Videos1Raw(BaseApi):
         AsyncGeneratorResponse,
     ]:
         args = self._videos_1_mapped_args(
-            query=query,
             direction=direction,
             filter=filter,
             links=links,
             page=page,
             per_page=per_page,
+            query=query,
             sort=sort,
             uris=uris,
         )
@@ -631,12 +630,12 @@ class Videos1Raw(BaseApi):
     
     def videos_1(
         self,
-        query: str,
         direction: typing.Optional[str] = None,
         filter: typing.Optional[str] = None,
         links: typing.Optional[str] = None,
         page: typing.Optional[typing.Union[int, float]] = None,
         per_page: typing.Optional[typing.Union[int, float]] = None,
+        query: typing.Optional[str] = None,
         sort: typing.Optional[str] = None,
         uris: typing.Optional[str] = None,
     ) -> typing.Union[
@@ -644,12 +643,12 @@ class Videos1Raw(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._videos_1_mapped_args(
-            query=query,
             direction=direction,
             filter=filter,
             links=links,
             page=page,
             per_page=per_page,
+            query=query,
             sort=sort,
             uris=uris,
         )
@@ -661,24 +660,24 @@ class Videos1(BaseApi):
 
     async def avideos_1(
         self,
-        query: str,
         direction: typing.Optional[str] = None,
         filter: typing.Optional[str] = None,
         links: typing.Optional[str] = None,
         page: typing.Optional[typing.Union[int, float]] = None,
         per_page: typing.Optional[typing.Union[int, float]] = None,
+        query: typing.Optional[str] = None,
         sort: typing.Optional[str] = None,
         uris: typing.Optional[str] = None,
         validate: bool = False,
         **kwargs,
     ) -> SearchVideosResponsePydantic:
         raw_response = await self.raw.avideos_1(
-            query=query,
             direction=direction,
             filter=filter,
             links=links,
             page=page,
             per_page=per_page,
+            query=query,
             sort=sort,
             uris=uris,
             **kwargs,
@@ -690,23 +689,23 @@ class Videos1(BaseApi):
     
     def videos_1(
         self,
-        query: str,
         direction: typing.Optional[str] = None,
         filter: typing.Optional[str] = None,
         links: typing.Optional[str] = None,
         page: typing.Optional[typing.Union[int, float]] = None,
         per_page: typing.Optional[typing.Union[int, float]] = None,
+        query: typing.Optional[str] = None,
         sort: typing.Optional[str] = None,
         uris: typing.Optional[str] = None,
         validate: bool = False,
     ) -> SearchVideosResponsePydantic:
         raw_response = self.raw.videos_1(
-            query=query,
             direction=direction,
             filter=filter,
             links=links,
             page=page,
             per_page=per_page,
+            query=query,
             sort=sort,
             uris=uris,
         )
@@ -720,12 +719,12 @@ class ApiForget(BaseApi):
 
     async def aget(
         self,
-        query: str,
         direction: typing.Optional[str] = None,
         filter: typing.Optional[str] = None,
         links: typing.Optional[str] = None,
         page: typing.Optional[typing.Union[int, float]] = None,
         per_page: typing.Optional[typing.Union[int, float]] = None,
+        query: typing.Optional[str] = None,
         sort: typing.Optional[str] = None,
         uris: typing.Optional[str] = None,
         **kwargs,
@@ -735,12 +734,12 @@ class ApiForget(BaseApi):
         AsyncGeneratorResponse,
     ]:
         args = self._videos_1_mapped_args(
-            query=query,
             direction=direction,
             filter=filter,
             links=links,
             page=page,
             per_page=per_page,
+            query=query,
             sort=sort,
             uris=uris,
         )
@@ -751,12 +750,12 @@ class ApiForget(BaseApi):
     
     def get(
         self,
-        query: str,
         direction: typing.Optional[str] = None,
         filter: typing.Optional[str] = None,
         links: typing.Optional[str] = None,
         page: typing.Optional[typing.Union[int, float]] = None,
         per_page: typing.Optional[typing.Union[int, float]] = None,
+        query: typing.Optional[str] = None,
         sort: typing.Optional[str] = None,
         uris: typing.Optional[str] = None,
     ) -> typing.Union[
@@ -764,12 +763,12 @@ class ApiForget(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]:
         args = self._videos_1_mapped_args(
-            query=query,
             direction=direction,
             filter=filter,
             links=links,
             page=page,
             per_page=per_page,
+            query=query,
             sort=sort,
             uris=uris,
         )

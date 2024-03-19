@@ -232,6 +232,7 @@ class PathValues(str, enum.Enum):
     USERS_USER_ID_WEBINARS_WEBINAR_ID_EMAIL_SETTINGS = "/users/{user_id}/webinars/{webinar_id}/email_settings"
     USERS_USER_ID_WEBINARS_WEBINAR_ID_REGISTRANTS = "/users/{user_id}/webinars/{webinar_id}/registrants"
     USERS_USER_ID_WEBINARS_WEBINAR_ID_REGISTRANTS_REGISTRANT_ID = "/users/{user_id}/webinars/{webinar_id}/registrants/{registrant_id}"
+    USERS_USER_ID_SUBSCRIPTION_ID = "/users/{user_id}/{subscription_id}"
     VIDEOS = "/videos"
     VIDEOS_VIDEO_ID = "/videos/{video_id}"
     VIDEOS_VIDEO_ID_ALBUMS = "/videos/{video_id}/albums"

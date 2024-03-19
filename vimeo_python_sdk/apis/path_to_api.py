@@ -227,6 +227,7 @@ from vimeo_python_sdk.apis.paths.users_user_id_webinars_webinar_id import UsersU
 from vimeo_python_sdk.apis.paths.users_user_id_webinars_webinar_id_email_settings import UsersUserIdWebinarsWebinarIdEmailSettings
 from vimeo_python_sdk.apis.paths.users_user_id_webinars_webinar_id_registrants import UsersUserIdWebinarsWebinarIdRegistrants
 from vimeo_python_sdk.apis.paths.users_user_id_webinars_webinar_id_registrants_registrant_id import UsersUserIdWebinarsWebinarIdRegistrantsRegistrantId
+from vimeo_python_sdk.apis.paths.users_user_id_subscription_id import UsersUserIdSubscriptionId
 from vimeo_python_sdk.apis.paths.videos import Videos
 from vimeo_python_sdk.apis.paths.videos_video_id import VideosVideoId
 from vimeo_python_sdk.apis.paths.videos_video_id_albums import VideosVideoIdAlbums
@@ -500,6 +501,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.USERS_USER_ID_WEBINARS_WEBINAR_ID_EMAIL_SETTINGS: UsersUserIdWebinarsWebinarIdEmailSettings,
         PathValues.USERS_USER_ID_WEBINARS_WEBINAR_ID_REGISTRANTS: UsersUserIdWebinarsWebinarIdRegistrants,
         PathValues.USERS_USER_ID_WEBINARS_WEBINAR_ID_REGISTRANTS_REGISTRANT_ID: UsersUserIdWebinarsWebinarIdRegistrantsRegistrantId,
+        PathValues.USERS_USER_ID_SUBSCRIPTION_ID: UsersUserIdSubscriptionId,
         PathValues.VIDEOS: Videos,
         PathValues.VIDEOS_VIDEO_ID: VideosVideoId,
         PathValues.VIDEOS_VIDEO_ID_ALBUMS: VideosVideoIdAlbums,
@@ -774,6 +776,7 @@ path_to_api = PathToApi(
         PathValues.USERS_USER_ID_WEBINARS_WEBINAR_ID_EMAIL_SETTINGS: UsersUserIdWebinarsWebinarIdEmailSettings,
         PathValues.USERS_USER_ID_WEBINARS_WEBINAR_ID_REGISTRANTS: UsersUserIdWebinarsWebinarIdRegistrants,
         PathValues.USERS_USER_ID_WEBINARS_WEBINAR_ID_REGISTRANTS_REGISTRANT_ID: UsersUserIdWebinarsWebinarIdRegistrantsRegistrantId,
+        PathValues.USERS_USER_ID_SUBSCRIPTION_ID: UsersUserIdSubscriptionId,
         PathValues.VIDEOS: Videos,
         PathValues.VIDEOS_VIDEO_ID: VideosVideoId,
         PathValues.VIDEOS_VIDEO_ID_ALBUMS: VideosVideoIdAlbums,

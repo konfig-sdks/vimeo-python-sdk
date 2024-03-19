@@ -10,12 +10,14 @@
 """
 
 from vimeo_python_sdk.paths.me_payment_methods_payment_method_id.get import GetPaymentMethodInfo
+from vimeo_python_sdk.paths.users_user_id_subscription_id.get import GetSubscriptionInfo
 from vimeo_python_sdk.paths.me_payment_methods.get import ListPaymentMethods
 from vimeo_python_sdk.apis.tags.payments_essentials_api_raw import PaymentsEssentialsApiRaw
 
 
 class PaymentsEssentialsApi(
     GetPaymentMethodInfo,
+    GetSubscriptionInfo,
     ListPaymentMethods,
 ):
     """NOTE:

@@ -63,6 +63,7 @@ from vimeo_python_sdk.apis.tags.live_event_end_api import LiveEventEndApi
 from vimeo_python_sdk.apis.tags.live_event_low_latency_api import LiveEventLowLatencyApi
 from vimeo_python_sdk.apis.tags.on_demand_purchases_and_rentals_api import OnDemandPurchasesAndRentalsApi
 from vimeo_python_sdk.apis.tags.on_demand_seasons_api import OnDemandSeasonsApi
+from vimeo_python_sdk.apis.tags.payments_essentials_api import PaymentsEssentialsApi
 from vimeo_python_sdk.apis.tags.teams_members_api import TeamsMembersApi
 from vimeo_python_sdk.apis.tags.users_watch_history_api import UsersWatchHistoryApi
 from vimeo_python_sdk.apis.tags.videos_embed_privacy_api import VideosEmbedPrivacyApi
@@ -71,7 +72,6 @@ from vimeo_python_sdk.apis.tags.authentication_extras_essentials_api import Auth
 from vimeo_python_sdk.apis.tags.categories_essentials_api import CategoriesEssentialsApi
 from vimeo_python_sdk.apis.tags.embed_presets_timeline_events_api import EmbedPresetsTimelineEventsApi
 from vimeo_python_sdk.apis.tags.live_event_m3_u8_playback_api import LiveEventM3U8PlaybackApi
-from vimeo_python_sdk.apis.tags.payments_essentials_api import PaymentsEssentialsApi
 from vimeo_python_sdk.apis.tags.users_analytics_api import UsersAnalyticsApi
 from vimeo_python_sdk.apis.tags.users_feeds_api import UsersFeedsApi
 from vimeo_python_sdk.apis.tags.videos_live_m3_u8_playback_api import VideosLiveM3U8PlaybackApi
@@ -159,6 +159,7 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.LIVEEVENT_LOW_LATENCY: LiveEventLowLatencyApi,
         TagValues.ON_DEMANDPURCHASES_AND_RENTALS: OnDemandPurchasesAndRentalsApi,
         TagValues.ON_DEMANDSEASONS: OnDemandSeasonsApi,
+        TagValues.PAYMENTSESSENTIALS: PaymentsEssentialsApi,
         TagValues.TEAMSMEMBERS: TeamsMembersApi,
         TagValues.USERSWATCH_HISTORY: UsersWatchHistoryApi,
         TagValues.VIDEOSEMBED_PRIVACY: VideosEmbedPrivacyApi,
@@ -167,7 +168,6 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.CATEGORIESESSENTIALS: CategoriesEssentialsApi,
         TagValues.EMBED_PRESETSTIMELINE_EVENTS: EmbedPresetsTimelineEventsApi,
         TagValues.LIVEEVENT_M3U8_PLAYBACK: LiveEventM3U8PlaybackApi,
-        TagValues.PAYMENTSESSENTIALS: PaymentsEssentialsApi,
         TagValues.USERSANALYTICS: UsersAnalyticsApi,
         TagValues.USERSFEEDS: UsersFeedsApi,
         TagValues.VIDEOSLIVE_M3U8_PLAYBACK: VideosLiveM3U8PlaybackApi,
@@ -256,6 +256,7 @@ tag_to_api = TagToApi(
         TagValues.LIVEEVENT_LOW_LATENCY: LiveEventLowLatencyApi,
         TagValues.ON_DEMANDPURCHASES_AND_RENTALS: OnDemandPurchasesAndRentalsApi,
         TagValues.ON_DEMANDSEASONS: OnDemandSeasonsApi,
+        TagValues.PAYMENTSESSENTIALS: PaymentsEssentialsApi,
         TagValues.TEAMSMEMBERS: TeamsMembersApi,
         TagValues.USERSWATCH_HISTORY: UsersWatchHistoryApi,
         TagValues.VIDEOSEMBED_PRIVACY: VideosEmbedPrivacyApi,
@@ -264,7 +265,6 @@ tag_to_api = TagToApi(
         TagValues.CATEGORIESESSENTIALS: CategoriesEssentialsApi,
         TagValues.EMBED_PRESETSTIMELINE_EVENTS: EmbedPresetsTimelineEventsApi,
         TagValues.LIVEEVENT_M3U8_PLAYBACK: LiveEventM3U8PlaybackApi,
-        TagValues.PAYMENTSESSENTIALS: PaymentsEssentialsApi,
         TagValues.USERSANALYTICS: UsersAnalyticsApi,
         TagValues.USERSFEEDS: UsersFeedsApi,
         TagValues.VIDEOSLIVE_M3U8_PLAYBACK: VideosLiveM3U8PlaybackApi,

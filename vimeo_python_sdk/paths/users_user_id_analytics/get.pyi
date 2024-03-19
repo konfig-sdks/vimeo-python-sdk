@@ -52,6 +52,10 @@ class DimensionSchema(
         return cls("country")
     
     @schemas.classproperty
+    def DEVICE_TYPE(cls):
+        return cls("device_type")
+    
+    @schemas.classproperty
     def EMBED_DOMAIN(cls):
         return cls("embed_domain")
     
@@ -198,6 +202,10 @@ class SortSchema(
     @schemas.classproperty
     def DEFAULT(cls):
         return cls("default")
+    
+    @schemas.classproperty
+    def DEVICE_TYPE(cls):
+        return cls("device_type")
     
     @schemas.classproperty
     def DOWNLOADS(cls):

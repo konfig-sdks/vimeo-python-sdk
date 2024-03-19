@@ -3864,6 +3864,13 @@ operation_parameter_map = {
             },
         ]
     },
+    '/users/{user_id}/{subscription_id}-GET': {
+        'parameters': [
+            {
+                'name': 'subscription_id'
+            },
+        ]
+    },
     '/me/payment_methods-GET': {
         'parameters': [
             {
@@ -5909,9 +5916,6 @@ operation_parameter_map = {
     '/videos-GET': {
         'parameters': [
             {
-                'name': 'query'
-            },
-            {
                 'name': 'direction'
             },
             {
@@ -5925,6 +5929,9 @@ operation_parameter_map = {
             },
             {
                 'name': 'per_page'
+            },
+            {
+                'name': 'query'
             },
             {
                 'name': 'sort'

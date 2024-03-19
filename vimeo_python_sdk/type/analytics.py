@@ -26,6 +26,9 @@ class RequiredAnalytics(TypedDict):
 
     country: AnalyticsCountry
 
+    # The type of device.
+    device_type: str
+
     # The number of downloads of the corresponding Vimeo content.
     downloads: typing.Union[int, float]
 

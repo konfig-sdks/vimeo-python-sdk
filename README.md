@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
 
 [![Visit Vimeo](./header.png)](https://developer.vimeo.com)
 
@@ -287,6 +287,7 @@ Build something great. Vimeo's API supports flexible, high-quality video integra
   * [`vimeo.on_demand\videos.remove_from_page`](#vimeoon_demandvideosremove_from_page)
   * [`vimeo.on_demand\videos.specific_video_get`](#vimeoon_demandvideosspecific_video_get)
   * [`vimeo.payments\essentials.get_payment_method_info`](#vimeopaymentsessentialsget_payment_method_info)
+  * [`vimeo.payments\essentials.get_subscription_info`](#vimeopaymentsessentialsget_subscription_info)
   * [`vimeo.payments\essentials.list_payment_methods`](#vimeopaymentsessentialslist_payment_methods)
   * [`vimeo.portfolios\essentials.get_all_user_portfolios`](#vimeoportfoliosessentialsget_all_user_portfolios)
   * [`vimeo.portfolios\essentials.get_user_portfolio`](#vimeoportfoliosessentialsget_user_portfolio)
@@ -11903,6 +11904,32 @@ The ID of the payment method.
 
 ---
 
+### `vimeo.payments\essentials.get_subscription_info`<a id="vimeopaymentsessentialsget_subscription_info"></a>
+
+This method returns information about the specified Vimeo payments service subscription.
+
+#### 🛠️ Usage<a id="🛠️-usage"></a>
+
+```python
+vimeo.payments\essentials.get_subscription_info(
+    subscription_id="abc12345",
+)
+```
+
+#### ⚙️ Parameters<a id="⚙️-parameters"></a>
+
+##### subscription_id: `str`<a id="subscription_id-str"></a>
+
+The ID of the subscription.
+
+#### 🌐 Endpoint<a id="🌐-endpoint"></a>
+
+`/users/{user_id}/{subscription_id}` `get`
+
+[🔙 **Back to Table of Contents**](#table-of-contents)
+
+---
+
 ### `vimeo.payments\essentials.list_payment_methods`<a id="vimeopaymentsessentialslist_payment_methods"></a>
 
 This method returns a list of all Vimeo payments service payment methods that are available to the authenticated user.
@@ -12788,7 +12815,7 @@ The ID of the user.
 
 ### `vimeo.showcases\custom_showcase_thumbnails.list`<a id="vimeoshowcasescustom_showcase_thumbnailslist"></a>
 
-This method returns every custom thumbnail of the specified showcase. The authenticated user must be the owner of the showcase.
+This method returns every custom thumbnail of the specified showcase.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
@@ -13908,7 +13935,7 @@ The number of items to show on each page of results, up to a maximum of 100.
 
 ### `vimeo.showcases\showcase_videos.list_in_showcase`<a id="vimeoshowcasesshowcase_videoslist_in_showcase"></a>
 
-This endpoint returns every video belonging to the authenticated user that can be added to or removed from the specified showcase. The user must be the owner of the showcase.
+This method returns every video belonging to the authenticated user that can be added to or removed from the specified showcase.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
@@ -14449,7 +14476,7 @@ The ID of the user.
 
 ##### dimension: `str`<a id="dimension-str"></a>
 
-The data dimension by which to group the results.  Option descriptions:  * `country` - Group the results by country.  * `embed_domain` - Group the results by embed domain.  * `total` - Group the results by the time range provided.  * `video` - Group the results by video. 
+The data dimension by which to group the results.  Option descriptions:  * `country` - Group the results by country.  * `device_type` - Group the results by device type.  * `embed_domain` - Group the results by embed domain.  * `total` - Group the results by the time range provided.  * `video` - Group the results by video. 
 
 ##### _from: `str`<a id="_from-str"></a>
 
@@ -14493,7 +14520,7 @@ The maximum number of items returned from the request, up to a limit of 1000 ite
 
 ##### sort: `str`<a id="sort-str"></a>
 
-The way to sort the results.  Option descriptions:  * `average_percent_watched` - Sort the results by mean seconds played.  * `average_time_watched` - Sort the results by mean percentage played.  * `comments` - Sort the results by the number of comments.  * `country` - Sort the results by country.  * `default` - Sort the results by the values of both the **dimension** and **time_interval** fields.  * `downloads` - Sort the results by the number of downloads.  * `embed_domain` - Sort the results by embed domain.  * `finishes` - Sort the results by the number of complete plays.  * `impressions` - Sort the results by the number of impressions.  * `like` - Sort the results by the number of likes.  * `time` - Sort the results by the value of the **start_date** field. This option is available only when the value of **time_interval** isn't `none`.  * `total_time_watched` - Sort the results by total seconds played.  * `unique_impressions` - Sort the results by unique impressions.  * `unique_viewers` - Sort the results by unique viewers.  * `video` - Sort the results by video ID.  * `views` - Sort the results by the number of views. 
+The way to sort the results.  Option descriptions:  * `average_percent_watched` - Sort the results by mean seconds played.  * `average_time_watched` - Sort the results by mean percentage played.  * `comments` - Sort the results by the number of comments.  * `country` - Sort the results by country.  * `default` - Sort the results by the values of both the **dimension** and **time_interval** fields.  * `device_type` - Sort the results by device type.  * `downloads` - Sort the results by the number of downloads.  * `embed_domain` - Sort the results by embed domain.  * `finishes` - Sort the results by the number of complete plays.  * `impressions` - Sort the results by the number of impressions.  * `like` - Sort the results by the number of likes.  * `time` - Sort the results by the value of the **start_date** field. This option is available only when the value of **time_interval** isn't `none`.  * `total_time_watched` - Sort the results by total seconds played.  * `unique_impressions` - Sort the results by unique impressions.  * `unique_viewers` - Sort the results by unique viewers.  * `video` - Sort the results by video ID.  * `views` - Sort the results by the number of views. 
 
 ##### time_interval: `str`<a id="time_interval-str"></a>
 
@@ -14547,7 +14574,7 @@ get_user_metrics_response = vimeo.users\analytics.get_user_metrics(
 
 ##### dimension: `str`<a id="dimension-str"></a>
 
-The data dimension by which to group the results.  Option descriptions:  * `country` - Group the results by country.  * `embed_domain` - Group the results by embed domain.  * `total` - Group the results by the time range provided.  * `video` - Group the results by video. 
+The data dimension by which to group the results.  Option descriptions:  * `country` - Group the results by country.  * `device_type` - Group the results by device type.  * `embed_domain` - Group the results by embed domain.  * `total` - Group the results by the time range provided.  * `video` - Group the results by video. 
 
 ##### _from: `str`<a id="_from-str"></a>
 
@@ -14591,7 +14618,7 @@ The maximum number of items returned from the request, up to a limit of 1000 ite
 
 ##### sort: `str`<a id="sort-str"></a>
 
-The way to sort the results.  Option descriptions:  * `average_percent_watched` - Sort the results by mean seconds played.  * `average_time_watched` - Sort the results by mean percentage played.  * `comments` - Sort the results by the number of comments.  * `country` - Sort the results by country.  * `default` - Sort the results by the values of both the **dimension** and **time_interval** fields.  * `downloads` - Sort the results by the number of downloads.  * `embed_domain` - Sort the results by embed domain.  * `finishes` - Sort the results by the number of complete plays.  * `impressions` - Sort the results by the number of impressions.  * `like` - Sort the results by the number of likes.  * `time` - Sort the results by the value of the **start_date** field. This option is available only when the value of **time_interval** isn't `none`.  * `total_time_watched` - Sort the results by total seconds played.  * `unique_impressions` - Sort the results by unique impressions.  * `unique_viewers` - Sort the results by unique viewers.  * `video` - Sort the results by video ID.  * `views` - Sort the results by the number of views. 
+The way to sort the results.  Option descriptions:  * `average_percent_watched` - Sort the results by mean seconds played.  * `average_time_watched` - Sort the results by mean percentage played.  * `comments` - Sort the results by the number of comments.  * `country` - Sort the results by country.  * `default` - Sort the results by the values of both the **dimension** and **time_interval** fields.  * `device_type` - Sort the results by device type.  * `downloads` - Sort the results by the number of downloads.  * `embed_domain` - Sort the results by embed domain.  * `finishes` - Sort the results by the number of complete plays.  * `impressions` - Sort the results by the number of impressions.  * `like` - Sort the results by the number of likes.  * `time` - Sort the results by the value of the **start_date** field. This option is available only when the value of **time_interval** isn't `none`.  * `total_time_watched` - Sort the results by total seconds played.  * `unique_impressions` - Sort the results by unique impressions.  * `unique_viewers` - Sort the results by unique viewers.  * `video` - Sort the results by video ID.  * `views` - Sort the results by the number of views. 
 
 ##### time_interval: `str`<a id="time_interval-str"></a>
 
@@ -17700,22 +17727,18 @@ This method returns all the videos that match custom search criteria.
 
 ```python
 videos_1_response = vimeo.videos\essentials.videos_1(
-    query="staff picks",
     direction="asc",
     filter="CC",
     links="https://vimeo.com/122375452,https://vimeo.com/273576296",
     page=1,
     per_page=10,
+    query="staff picks",
     sort="alphabetical",
     uris="/videos/122375452,/videos/273576296",
 )
 ```
 
 #### ⚙️ Parameters<a id="⚙️-parameters"></a>
-
-##### query: `str`<a id="query-str"></a>
-
-The search query.
 
 ##### direction: `str`<a id="direction-str"></a>
 
@@ -17736,6 +17759,10 @@ The page number of the results to show.
 ##### per_page: `Union[int, float]`<a id="per_page-unionint-float"></a>
 
 The number of items to show on each page of results, up to a maximum of 100.
+
+##### query: `str`<a id="query-str"></a>
+
+The search query.
 
 ##### sort: `str`<a id="sort-str"></a>
 

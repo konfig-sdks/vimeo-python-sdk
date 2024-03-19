@@ -27,6 +27,9 @@ class Analytics(BaseModel):
 
     country: AnalyticsCountry = Field(alias='country')
 
+    # The type of device.
+    device_type: str = Field(alias='device_type')
+
     # The number of downloads of the corresponding Vimeo content.
     downloads: typing.Union[int, float] = Field(alias='downloads')
 

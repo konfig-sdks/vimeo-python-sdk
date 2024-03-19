@@ -53,6 +53,7 @@ class DimensionSchema(
     class MetaOapg:
         enum_value_to_name = {
             "country": "COUNTRY",
+            "device_type": "DEVICE_TYPE",
             "embed_domain": "EMBED_DOMAIN",
             "total": "TOTAL",
             "video": "VIDEO",
@@ -61,6 +62,10 @@ class DimensionSchema(
     @schemas.classproperty
     def COUNTRY(cls):
         return cls("country")
+    
+    @schemas.classproperty
+    def DEVICE_TYPE(cls):
+        return cls("device_type")
     
     @schemas.classproperty
     def EMBED_DOMAIN(cls):
@@ -205,6 +210,7 @@ class SortSchema(
             "comments": "COMMENTS",
             "country": "COUNTRY",
             "default": "DEFAULT",
+            "device_type": "DEVICE_TYPE",
             "downloads": "DOWNLOADS",
             "embed_domain": "EMBED_DOMAIN",
             "finishes": "FINISHES",
@@ -237,6 +243,10 @@ class SortSchema(
     @schemas.classproperty
     def DEFAULT(cls):
         return cls("default")
+    
+    @schemas.classproperty
+    def DEVICE_TYPE(cls):
+        return cls("device_type")
     
     @schemas.classproperty
     def DOWNLOADS(cls):

@@ -39,6 +39,7 @@ class Analytics(
             "average_time_watched",
             "embed_domain",
             "unique_impressions",
+            "device_type",
             "impressions",
             "average_percent_watched",
             "downloads",
@@ -56,6 +57,7 @@ class Analytics(
             @staticmethod
             def country() -> typing.Type['AnalyticsCountry']:
                 return AnalyticsCountry
+            device_type = schemas.StrSchema
             downloads = schemas.NumberSchema
             embed_domain = schemas.StrSchema
             end_date = schemas.StrSchema
@@ -74,6 +76,7 @@ class Analytics(
                 "average_percent_watched": average_percent_watched,
                 "average_time_watched": average_time_watched,
                 "country": country,
+                "device_type": device_type,
                 "downloads": downloads,
                 "embed_domain": embed_domain,
                 "end_date": end_date,
@@ -93,6 +96,7 @@ class Analytics(
     average_time_watched: MetaOapg.properties.average_time_watched
     embed_domain: MetaOapg.properties.embed_domain
     unique_impressions: MetaOapg.properties.unique_impressions
+    device_type: MetaOapg.properties.device_type
     impressions: MetaOapg.properties.impressions
     average_percent_watched: MetaOapg.properties.average_percent_watched
     downloads: MetaOapg.properties.downloads
@@ -110,6 +114,9 @@ class Analytics(
     
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["country"]) -> 'AnalyticsCountry': ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["device_type"]) -> MetaOapg.properties.device_type: ...
     
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["downloads"]) -> MetaOapg.properties.downloads: ...
@@ -147,7 +154,7 @@ class Analytics(
     @typing.overload
     def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["average_percent_watched", "average_time_watched", "country", "downloads", "embed_domain", "end_date", "finishes", "impressions", "metadata", "start_date", "total_time_watched", "unique_impressions", "unique_viewers", "views", ], str]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["average_percent_watched", "average_time_watched", "country", "device_type", "downloads", "embed_domain", "end_date", "finishes", "impressions", "metadata", "start_date", "total_time_watched", "unique_impressions", "unique_viewers", "views", ], str]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
@@ -160,6 +167,9 @@ class Analytics(
     
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["country"]) -> 'AnalyticsCountry': ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["device_type"]) -> MetaOapg.properties.device_type: ...
     
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["downloads"]) -> MetaOapg.properties.downloads: ...
@@ -197,7 +207,7 @@ class Analytics(
     @typing.overload
     def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["average_percent_watched", "average_time_watched", "country", "downloads", "embed_domain", "end_date", "finishes", "impressions", "metadata", "start_date", "total_time_watched", "unique_impressions", "unique_viewers", "views", ], str]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["average_percent_watched", "average_time_watched", "country", "device_type", "downloads", "embed_domain", "end_date", "finishes", "impressions", "metadata", "start_date", "total_time_watched", "unique_impressions", "unique_viewers", "views", ], str]):
         return super().get_item_oapg(name)
     
 
@@ -210,6 +220,7 @@ class Analytics(
         average_time_watched: typing.Union[MetaOapg.properties.average_time_watched, decimal.Decimal, int, float, ],
         embed_domain: typing.Union[MetaOapg.properties.embed_domain, str, ],
         unique_impressions: typing.Union[MetaOapg.properties.unique_impressions, decimal.Decimal, int, float, ],
+        device_type: typing.Union[MetaOapg.properties.device_type, str, ],
         impressions: typing.Union[MetaOapg.properties.impressions, decimal.Decimal, int, float, ],
         average_percent_watched: typing.Union[MetaOapg.properties.average_percent_watched, decimal.Decimal, int, float, ],
         downloads: typing.Union[MetaOapg.properties.downloads, decimal.Decimal, int, float, ],
@@ -230,6 +241,7 @@ class Analytics(
             average_time_watched=average_time_watched,
             embed_domain=embed_domain,
             unique_impressions=unique_impressions,
+            device_type=device_type,
             impressions=impressions,
             average_percent_watched=average_percent_watched,
             downloads=downloads,
